@@ -1,0 +1,294 @@
+:root {
+    --color-azul: #004a99;
+    --color-negro: #111111;
+    --color-oscuro: #1a1a1a;
+    --color-blanco: #ffffff;
+    --color-amarillo: #FFD700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+ body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    line-height: 1.6;
+ }
+
+ h1, h2, h3 {
+    font-weight: 900;
+    text-transform: uppercase;
+ }
+
+ .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: rgba(0,0,0,0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--color-azul);
+ }
+
+.nav-logo {
+    height: 60px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-amarillo);
+}
+
+.btn-nav {
+    background-color: var(--color-azul);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.hero {
+    height: 90vh;
+    background-color: var(--color-oscuro);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    text-shadow: 2px 2px 0px var(--color-azul);
+}
+
+.btn-main {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
+    text-decoration: none;
+    font-weight: 900;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-main:hover {
+    transform: scale(1.85);
+    background-color: #e6c300;
+}
+
+.servicios {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: var(--color-negro);
+}
+
+.servicios h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--color-azul);
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.servicio-card {
+    background-color: var(--color-oscuro);
+    padding: 2rem;
+    border-radius: 8px;
+    border-bottom: 4px solid var(--color-amarillo);
+}
+
+.servicio-card.azul {
+    background-color: var(--color-azul);
+    border-bottom: 4px solid var(--color-blanco);
+}
+
+/* --- SECCIÓN INFO CLAVE --- */
+.info-clave {
+    padding: 4rem 5%;
+    background-color: var(--color-oscuro);
+    border-top: 2px solid var(--color-azul);
+}
+
+.info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: flex-start; /* Para que las cajas no se estiren raro */
+}
+
+/* Estilo de las Cajas contenedoras */
+.horarios-box, .planes-box {
+    flex: 1 1 350px; /* Tamaño base */
+    background-color: var(--color-negro);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* Sombrita facherita */
+}
+
+.info-container h2 {
+    color: var(--color-amarillo);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--color-azul);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* --- ESTILOS DE HORARIOS (Corregido) --- */
+.horarios-box ul {
+    list-style: none; /* Sacamos los puntitos */
+    padding: 0;
+}
+
+.horarios-box ul li {
+    display: flex;
+    justify-content: space-between; /* Texto a los extremos */
+    padding: 1rem 0;
+    border-bottom: 1px solid #333;
+    font-size: 0.95rem;
+}
+
+.horarios-box ul li span:first-child {
+    color: var(--color-azul); /* Días en azul */
+    font-weight: 700;
+}
+
+.aviso-horario {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
+/* --- ESTILOS DE PLANES --- */
+.plan-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed #333; /* Línea punteada para separar */
+}
+
+/* El último plan no lleva línea abajo */
+.plan-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.plan-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-blanco);
+}
+
+.precio {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--color-azul);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.mes {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #888;
+}
+
+.desc {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* --- PLAN DESTACADO (Borde Amarillo) --- */
+.plan-item.destacado {
+    border: 2px solid var(--color-amarillo);
+    padding: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    position: relative;
+    background-color: rgba(255, 215, 0, 0.05); /* Fondo amarillito muy suave */
+}
+
+.etiqueta-amarilla {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contacto {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: var(--color-azul);
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    border-radius: 50px;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--color-negro);
+    font-size: 0.9rem;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .nav-bar {
+        justify-content: center;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
